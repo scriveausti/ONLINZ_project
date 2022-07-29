@@ -4,7 +4,7 @@ def ask_name():
         if user_name != "":
             break
         else:
-            print('<error> please enter your name and dont leave it blank')
+            print("<error> please enter your name and don't leave it blank")
             print("")
     return user_name
 
