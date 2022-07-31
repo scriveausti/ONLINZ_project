@@ -8,6 +8,11 @@ def ask_name():
             print("")
     return user_name
 
+def ask_island():
+    while True:
+        print("")
+        customer_island = input("")
+
 if __name__ == '__main__':
     user_name = ask_name()
     print('Hello {}'.format(user_name))
