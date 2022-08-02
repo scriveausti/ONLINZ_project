@@ -9,7 +9,7 @@ def ask_name():
 islands = [['1','north', 1],['2','south', 1.5],['3','stewart', 2]]
 island_numbers = []
 for i in islands:
-    num, island, not_used = i
+    num, not_used, not_used2 = i
     island_numbers.append(num)
 
 def ask_island(total_price):
@@ -30,11 +30,12 @@ def ask_island(total_price):
         if customer_island == num:
             total_price = total_price * multiplier
 
-def ask_other_info():
-    user_lastname = blank_checker("what is your last name").title()
+def ask_other_info(user_name,total_price):
+    user_lastname = blank_checker("what is your last name? ").title()
     user_addres = blank_checker("what is your address? ").title()
     user_phone_number = blank_checker("what is your phone number? ")
-
+    user_info = [user_name,user_lastname,user_addres,user_phone_number,total_price]
+    return user_info
 
 if __name__ == '__main__':
     #user_name = ask_name()
