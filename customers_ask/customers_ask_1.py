@@ -1,5 +1,5 @@
 from basic_functions.blank_checker import blank_checker
-
+from basic_functions.int_checker import int_checker
 
 def ask_name():
     user_name = blank_checker("what is your name? ").title().strip()
@@ -28,12 +28,14 @@ def ask_island(total_price):
     for i in islands:
         num, not_used, multiplier = i
         if customer_island == num:
-            total_price = total_price * multiplier
+            total_price = total_price * float(multiplier)
+            return total_price
+
 
 def ask_other_info(user_name,total_price):
     user_lastname = blank_checker("what is your last name? ").title()
     user_addres = blank_checker("what is your address? ").title()
-    user_phone_number = blank_checker("what is your phone number? ")
+    user_phone_number = int_checker("what is your phone number? ")
     user_info = [user_name,user_lastname,user_addres,user_phone_number,total_price]
     return user_info
 
@@ -43,3 +45,4 @@ if __name__ == '__main__':
 
     user_island = ask_island(1)
     print(user_island)
+

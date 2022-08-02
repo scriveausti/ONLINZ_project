@@ -1,7 +1,7 @@
-def number_checker(question):
+def int_checker(question):
     while True:
         try:
-            number = float(input(question))
+            number = int(input(question))
             if number < 0.00:
                 print('<error> please enter a number above 0')
                 print("")
