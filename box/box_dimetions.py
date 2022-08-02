@@ -2,6 +2,7 @@ from customers_ask.customers_ask_1 import ask_name
 from basic_functions.float_checker import int_checker
 
 
+# asks user for the dimensions of their box and then calculates the base rate
 def box_dim(user_name):
     box_height = int_checker("Hello {}, how tall is the box you will be returning your item/s? (cm) ".format(user_name))
     box_width = int_checker("what is the width of your box? (cm) ")
@@ -16,6 +17,7 @@ def box_dim(user_name):
     return price
 
 
+# this is for testing the functions for errors
 if __name__ == '__main__':
     name = ask_name()
     total_price = box_dim(name)

@@ -1,3 +1,4 @@
+# asks the user the inputted question and checks if it is blank if it is it says to in put the right thing
 def blank_checker(question):
     while True:
         thing = input(question).strip()
@@ -8,5 +9,6 @@ def blank_checker(question):
     return thing
 
 
+# this is for testing the functions for errors
 if __name__ == '__main__':
     blank_checker('enter something')
