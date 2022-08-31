@@ -19,6 +19,7 @@ def box_dim(user_name):
 
 # this is for testing the functions for errors
 if __name__ == '__main__':
-    name = ask_name()
-    total_price = box_dim(name)
-    print(total_price)
+    while True:
+        name = 'austin'
+        total_price = box_dim(name)
+        print(total_price)

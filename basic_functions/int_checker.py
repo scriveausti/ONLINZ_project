@@ -15,5 +15,6 @@ def int_checker(question):
 
 # this is for testing the functions for errors
 if __name__ == '__main__':
-    num = int_checker("enter a number ")
-    print(num)
+    while True:
+        num = int_checker("enter a number ")
+        print("input accepted : {}".format(num))

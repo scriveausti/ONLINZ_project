@@ -48,8 +48,7 @@ def ask_other_info(user_name, total_price):
 
 # this is for testing the functions for errors
 if __name__ == '__main__':
-    user_name = ask_name()
-    print('Hello {}'.format(user_name))
+    while True:
+        user_name = ask_other_info('austin',10)
+        print('accepted, input: {}'.format(user_name))
 
-    user_island = ask_island(1)
-    print(user_island)

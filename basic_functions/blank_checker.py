@@ -11,4 +11,6 @@ def blank_checker(question):
 
 # this is for testing the functions for errors
 if __name__ == '__main__':
-    blank_checker('enter something')
+    while True:
+        output = blank_checker('enter something')
+        print("input accepted : {}".format(output))
