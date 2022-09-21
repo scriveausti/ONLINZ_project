@@ -4,7 +4,12 @@ from basic_functions.int_checker import int_checker
 
 # asks the user for there name and then saves it to a variable called user_name
 def ask_name():
-    user_name = blank_checker("what is your name? ").title().strip()
+    while True:
+        user_name = blank_checker("what is your name? \n").title().strip()
+        if not user_name.isdigit():
+            break
+        else:
+            print("<error> please don't just enter digits\n")
     return user_name
 
 
@@ -49,6 +54,6 @@ def ask_other_info(user_name, total_price):
 # this is for testing the functions for errors
 if __name__ == '__main__':
     while True:
-        user_name = ask_other_info('austin',10)
+        user_name = ask_name()
         print('accepted, input: {}'.format(user_name))
 

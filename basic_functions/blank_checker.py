@@ -3,7 +3,7 @@ def blank_checker(question):
     while True:
         thing = input(question).strip()
         if thing == "":
-            print("<error> please don't leave this blank")
+            print("<error> please don't leave this blank\n")
         else:
             break
     return thing
