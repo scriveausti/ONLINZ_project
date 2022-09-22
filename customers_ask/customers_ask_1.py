@@ -1,16 +1,13 @@
 from basic_functions.blank_checker import blank_checker
 from basic_functions.int_checker import int_checker
-
+from basic_functions.isdigit_checker import digit_checker
 
 # asks the user for there name and then saves it to a variable called user_name
 def ask_name():
     while True:
-        user_name = blank_checker("what is your name? \n").title().strip()
-        if not user_name.isdigit():
-            break
-        else:
-            print("<error> please don't just enter digits\n")
-    return user_name
+        user_name = blank_checker("what is your name? \n").title()
+        if digit_checker(user_name) == False:
+            return user_name
 
 
 # format is number for user to select , island name, price multiplier
@@ -45,15 +42,18 @@ def ask_island(total_price):
 
 # asks the user for their last name,
 def ask_other_info(user_name, total_price):
-    user_lastname = blank_checker("what is your last name? ").title()
-    user_address = blank_checker("what is your address? ").title()
-    user_phone_number = int_checker("what is your phone number? ")
+    while True:
+        user_lastname = blank_checker("what is your last name? \n").title()
+        if digit_checker(user_lastname) == False:
+            break
+    user_address = blank_checker("what is your address? \n").title()
+    user_phone_number = int_checker("what is your phone number? \n")
     user_info = [user_name, user_lastname, user_address, user_phone_number, total_price]
     return user_info
 
 # this is for testing the functions for errors
 if __name__ == '__main__':
     while True:
-        user_name = ask_name()
+        user_name = ask_other_info('Austin', 9.00)
         print('accepted, input: {}'.format(user_name))
 
